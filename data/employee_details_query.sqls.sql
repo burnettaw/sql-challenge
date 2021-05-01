@@ -80,22 +80,6 @@ where d.dept_name = 'Sales'
 ORDER BY e.emp_no
 
 -----------------------------------7
-/*  
-List all employees in the Sales and Development departments, including their 
-employee number, last name, first name, and department name
-SELECT e.emp_no,
-    e.first_name,
-    e.last_name,
-    d.dept_name
-INTO sales_dev
-FROM current_emp as e
-    INNER JOIN dept_emp AS de
-        ON (e.emp_no = de.emp_no)
-    INNER JOIN departments AS d
-        ON (de.dept_no = d.dept_no)
-WHERE d.dept_name IN ('Sales', 'Development')
-ORDER BY e.emp_no;
-*/
 SELECT    e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees as e 
 
